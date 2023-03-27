@@ -1,6 +1,14 @@
+export DISPLAY=192.168.1.59:0.0
 URL="http://devimages.apple.com/iphone/samples/bipbop/gear2/prog_index.m3u8"
-gst-launch-1.0 -v --gst-debug-level=1  \
-   souphttpsrc location=${URL}  ! decodebin ! videoconvert ! videoscale ! video/x-raw \
- ! x264enc tune=zerolatency ! h264parse ! mpegtsmux \
- ! hlssink playlist-location=/shared/playlist.m3u8 playlist-root=http://192.168.1.236/shared location=/shared/segment_%05d.ts target-duration=10 max-files=15
+gst-launch-1.0 -v --gst-debug-level=1 -e videomixer name=mix sink_0::xpos=0   sink_0::ypos=0  sink_0::alpha=0 sink_1::xpos=0   sink_1::ypos=0  sink_2::xpos=200 sink_2::ypos=0 sink_3::xpos=0   sink_3::ypos=100 sink_4::xpos=200 sink_4::ypos=100 ! tee name=t ! queue ! autovideosink videotestsrc pattern="black" ! 'video/x-raw,format=UYVY,width=400,height=200' \
+! mix.sink_0 souphttpsrc location='http://devimages.apple.com/iphone/samples/bipbop/gear2/prog_index.m3u8'   ! decodebin ! videoconvert ! videoscale ! 'video/x-raw,width=200,height=100'  \
+! mix.sink_1 souphttpsrc location='http://devimages.apple.com/iphone/samples/bipbop/gear2/prog_index.m3u8'   ! decodebin ! videoconvert ! videoscale ! 'video/x-raw,width=200,height=100'  \
+! mix.sink_2 souphttpsrc location='http://devimages.apple.com/iphone/samples/bipbop/gear3/prog_index.m3u8'   ! decodebin ! videoconvert ! videoscale ! 'video/x-raw,width=200,height=100'  \
+! mix.sink_3 souphttpsrc location='http://devimages.apple.com/iphone/samples/bipbop/gear2/prog_index.m3u8'   ! decodebin ! videoconvert ! videoscale ! 'video/x-raw,width=200,height=100'  \
+! mix.sink_4 \
+t. ! x264enc tune=zerolatency ! h264parse ! mpegtsmux ! hlssink playlist-location=/shared/playlist.m3u8 playlist-root=http://192.168.1.236/shared location=/shared/segment_%05d.ts target-duration=10 max-files=15  \
+#gst-launch-1.0 -v --gst-debug-level=1  \
+#   souphttpsrc location=${URL}  ! decodebin ! videoconvert ! videoscale ! video/x-raw \
+# ! x264enc tune=zerolatency ! h264parse ! mpegtsmux \
+# ! hlssink playlist-location=/shared/playlist.m3u8 playlist-root=http://192.168.1.236/shared location=/shared/segment_%05d.ts target-duration=10 max-files=15
 #gst-launch-1.0 -v --gst-debug-level=1 -e videomixer name=mix sink_0::xpos=0   sink_0::ypos=0  sink_0::alpha=0        sink_1::xpos=0   sink_1::ypos=0         sink_2::xpos=200 sink_2::ypos=0         sink_3::xpos=0   sink_3::ypos=100         sink_4::xpos=200 sink_4::ypos=100 ! videoconvert ! video/x-raw,width=400, height=400 ! x264enc ! h264parse ! video/x-h264,profile=\"high\" ! mpegtsmux ! hlssink2 playlist-root=http://192.168.1.236/shared location=/shared/segment_%05d.ts target-duration=5 max-files=5 ! 'video/x-raw,format=UYVY,width=400,height=200'  ! mix.sink_0 souphttpsrc location='http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8'     ! decodebin name=a a. ! queue ! autoaudiosink a. ! queue ! videoconvert ! videoscale ! 'video/x-raw,format=UYVY,width=200,height=100' ! mix.sink_1 souphttpsrc location='http://devimages.apple.com/iphone/samples/bipbop/gear2/prog_index.m3u8'     ! decodebin name=b b. ! queue ! autoaudiosink b. ! queue ! videoconvert ! videoscale ! 'video/x-raw,format=UYVY,width=200,height=100' ! mix.sink_2 souphttpsrc location='http://devimages.apple.com/iphone/samples/bipbop/gear3/prog_index.m3u8'     ! decodebin name=c c. ! queue ! autoaudiosink c. ! queue ! videoconvert ! videoscale ! 'video/x-raw,format=UYVY,width=200,height=100' ! mix.sink_3 souphttpsrc location='http://devimages.apple.com/iphone/samples/bipbop/gear2/prog_index.m3u8'     ! decodebin name=d d. ! queue ! autoaudiosink d. ! queue ! videoconvert ! videoscale ! 'video/x-raw,format=UYVY,width=200,height=100' ! mix.sink_4 
