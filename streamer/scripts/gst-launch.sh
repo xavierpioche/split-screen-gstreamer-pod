@@ -6,7 +6,7 @@ gst-launch-1.0 -v --gst-debug-level=1 -e videomixer name=mix sink_0::xpos=0   si
 ! mix.sink_2 souphttpsrc location='http://devimages.apple.com/iphone/samples/bipbop/gear3/prog_index.m3u8'   ! decodebin ! videoconvert ! videoscale ! 'video/x-raw,width=200,height=100'  \
 ! mix.sink_3 souphttpsrc location='http://devimages.apple.com/iphone/samples/bipbop/gear2/prog_index.m3u8'   ! decodebin ! videoconvert ! videoscale ! 'video/x-raw,width=200,height=100'  \
 ! mix.sink_4 \
-t. ! x264enc tune=zerolatency ! h264parse ! mpegtsmux ! hlssink playlist-location=/shared/playlist.m3u8 playlist-root=http://192.168.1.236/shared location=/shared/segment_%05d.ts target-duration=10 max-files=15  \
+t. ! x264enc tune=zerolatency ! h264parse ! mpegtsmux ! hlssink playlist-location=/shared/playlist.m3u8 playlist-root=http://web/shared location=/shared/segment_%05d.ts target-duration=10 max-files=15  \
 #gst-launch-1.0 -v --gst-debug-level=1  \
 #   souphttpsrc location=${URL}  ! decodebin ! videoconvert ! videoscale ! video/x-raw \
 # ! x264enc tune=zerolatency ! h264parse ! mpegtsmux \

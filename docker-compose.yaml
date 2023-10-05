@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+   streamer: 
+     build: ./streamer/
+     volumes:
+       - ./shared:/shared
+
+   web:
+     build: ./web/
+     volumes:
+       - ./shared:/shared
+     expose:
+       - "8080"

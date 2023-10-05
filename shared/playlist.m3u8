@@ -1,15 +1,15 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-MEDIA-SEQUENCE:3
+#EXT-X-MEDIA-SEQUENCE:28
 #EXT-X-TARGETDURATION:10
 
 #EXTINF:10,
-http://192.168.1.236/shared/segment_00002.ts
+http://web/shared/segment_00027.ts
 #EXTINF:10,
-http://192.168.1.236/shared/segment_00003.ts
+http://web/shared/segment_00028.ts
 #EXTINF:10,
-http://192.168.1.236/shared/segment_00004.ts
+http://web/shared/segment_00029.ts
 #EXTINF:10,
-http://192.168.1.236/shared/segment_00005.ts
+http://web/shared/segment_00030.ts
 #EXTINF:10,
-http://192.168.1.236/shared/segment_00006.ts
+http://web/shared/segment_00031.ts
