@@ -1,0 +1,109 @@
+<mxfile host="Electron" modified="2023-10-05T17:37:17.414Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.2 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="BxWMAQPkzOk1hy9HY0Hp" version="22.0.2" type="device">
+  <diagram name="Page-1" id="NUEhnNweZH3f21gtfPJv">
+    <mxGraphModel dx="1195" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-1" value="video&lt;br&gt;stream 1" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.general.video" vertex="1" parent="1">
+          <mxGeometry x="41" y="190" width="49" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-2" value="video&lt;br&gt;stream 2" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.general.video" vertex="1" parent="1">
+          <mxGeometry x="191" y="190" width="49" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-3" value="video&lt;br&gt;stream 3" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.general.video" vertex="1" parent="1">
+          <mxGeometry x="331" y="190" width="49" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-4" value="video&lt;br&gt;stream 4" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.general.video" vertex="1" parent="1">
+          <mxGeometry x="471" y="190" width="49" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-5" value="gstreamer-pod" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" vertex="1" parent="1">
+          <mxGeometry x="257.82" y="340" width="73.18" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-6" value="web-viewer-pod" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" vertex="1" parent="1">
+          <mxGeometry x="446.83" y="500" width="73.17" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-7" value="shared folder" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#4495D1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.local_disk;" vertex="1" parent="1">
+          <mxGeometry x="364" y="410" width="57.2" height="56.8" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-10" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="439" y="640" width="80" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-9" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.monitor;" vertex="1" parent="DeiUiOltQo_yT-XwU_T3-10">
+          <mxGeometry width="80" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-8" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.video_play;" vertex="1" parent="DeiUiOltQo_yT-XwU_T3-10">
+          <mxGeometry x="15" y="3" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.959;exitY=0.66;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.043;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeiUiOltQo_yT-XwU_T3-1" target="DeiUiOltQo_yT-XwU_T3-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="339" y="460" as="sourcePoint" />
+            <mxPoint x="389" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="DeiUiOltQo_yT-XwU_T3-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="98" y="233" as="sourcePoint" />
+            <mxPoint x="279" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.041;exitY=0.82;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="DeiUiOltQo_yT-XwU_T3-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="108" y="243" as="sourcePoint" />
+            <mxPoint x="309" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.114;exitY=0.617;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.006;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DeiUiOltQo_yT-XwU_T3-4" target="DeiUiOltQo_yT-XwU_T3-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="98" y="233" as="sourcePoint" />
+            <mxPoint x="271" y="349" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.998;exitY=0.833;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="DeiUiOltQo_yT-XwU_T3-5" target="DeiUiOltQo_yT-XwU_T3-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="349" y="420" as="sourcePoint" />
+            <mxPoint x="399" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-17" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="DeiUiOltQo_yT-XwU_T3-7" target="DeiUiOltQo_yT-XwU_T3-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="349" y="420" as="sourcePoint" />
+            <mxPoint x="399" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="DeiUiOltQo_yT-XwU_T3-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="479" y="580" as="sourcePoint" />
+            <mxPoint x="399" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-19" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="DeiUiOltQo_yT-XwU_T3-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="429" y="450" as="sourcePoint" />
+            <mxPoint x="489" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-20" value="opencv-pod" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" vertex="1" parent="1">
+          <mxGeometry x="498.9999999999999" y="350" width="73.17" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-21" value="FaaS&lt;br&gt;platforms" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="629" y="310" width="49" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-22" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;dashPattern=8 8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="DeiUiOltQo_yT-XwU_T3-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="569" y="360" as="sourcePoint" />
+            <mxPoint x="499" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-23" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;dashPattern=8 8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="678" y="324" as="sourcePoint" />
+            <mxPoint x="719" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DeiUiOltQo_yT-XwU_T3-24" value="other&lt;br&gt;cloud services" style="image;html=1;image=img/lib/clip_art/networking/Cloud_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="719" y="250" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
